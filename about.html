@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>NxM — Our Story</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="style.css" rel="stylesheet">
+</head>
+<body>
+  <canvas id="heartsCanvas" aria-hidden="true"></canvas>
+
+  <nav class="navbar navbar-expand-lg fixed-top">
+    <div class="container-fluid px-3">
+      <a class="navbar-brand fw-bold" href="index.html">NxM</a>
+      <button class="navbar-toggler btn btn-outline-light" type="button" data-bs-toggle="collapse" data-bs-target="#navLinksAbout">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navLinksAbout">
+        <ul class="navbar-nav ms-auto align-items-lg-center">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="messages.html">Messages</a></li>
+          <li class="nav-item"><a class="nav-link" href="memories.html">Memories</a></li>
+          <li class="nav-item"><a class="nav-link active" href="about.html">About</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <main class="container py-5">
+    <section class="text-center mb-3">
+      <h2 class="fw-semibold">Our Story</h2>
+      <p class="small-muted">A short timeline of us</p>
+    </section>
+
+    <section class="card card-dark p-3 mb-4">
+      <div class="timeline">
+        <div class="timeline-item">
+          <h6 class="mb-1">How we met</h6>
+          <p class="small-muted mb-2">Write your brief "how we met" story in the code or replace this text in the page.</p>
+        </div>
+
+        <div class="timeline-item">
+          <h6 class="mb-1">Our favorite memory</h6>
+          <p class="small-muted mb-2">A moment that always makes us smile.</p>
+        </div>
+
+        <div class="timeline-item">
+          <h6 class="mb-1">What I love about you</h6>
+          <p class="small-muted mb-2">Short bullet points or a paragraph. Make it yours.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="card card-dark p-3 mb-4">
+      <div class="row">
+        <div class="col-md-8">
+          <h5>Music (Spotify)</h5>
+          <p class="small-muted">A song that tells our imperfect, beautiful love.</p>
+
+          <!-- Spotify embed for "Imperfect Love" — SEVENTEEN -->
+          <div class="ratio ratio-16x9 mb-2">
+            <iframe src="https://open.spotify.com/embed/track/35jvwACXmrreYIEOAGc2Kr" allow="encrypted-media" style="border-radius:8px"></iframe>
+          </div>
+
+          <div class="small-muted">Or upload a local track:</div>
+          <input id="musicUploadAbout" type="file" accept="audio/*" class="form-control form-control-sm mt-2">
+          <audio id="localAudioAbout" class="w-100 mt-2" controls></audio>
+        </div>
+
+        <div class="col-md-4">
+          <h6>Quote</h6>
+          <blockquote class="blockquote small-muted">"Forever isn't a place — it's a person." — NxM</blockquote>
+        </div>
+      </div>
+    </section>
+
+    <footer class="text-center small-muted py-3">NxM • Made with love</footer>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

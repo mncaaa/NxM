@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>NxM — Messages</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="style.css" rel="stylesheet">
+</head>
+<body>
+  <canvas id="heartsCanvas" aria-hidden="true"></canvas>
+
+  <nav class="navbar navbar-expand-lg fixed-top">
+    <div class="container-fluid px-3">
+      <a class="navbar-brand fw-bold" href="index.html">NxM</a>
+      <button class="navbar-toggler btn btn-outline-light" type="button" data-bs-toggle="collapse" data-bs-target="#navLinksMsg">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navLinksMsg">
+        <ul class="navbar-nav ms-auto align-items-lg-center">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link active" href="messages.html">Messages</a></li>
+          <li class="nav-item"><a class="nav-link" href="memories.html">Memories</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <main class="container py-5">
+    <section class="text-center mb-3">
+      <h2 class="fw-semibold">Love Letters</h2>
+      <p class="small-muted">Write, save, and revisit your notes — private to your browser.</p>
+    </section>
+
+    <section class="card card-dark p-3 mb-4">
+      <div class="row g-3">
+        <div class="col-md-8">
+          <label class="form-label small">New message</label>
+          <textarea id="newMessage" class="form-control" rows="4" placeholder="Write a love note..."></textarea>
+          <div class="mt-2 d-flex gap-2">
+            <input id="msgTitle" class="form-control form-control-sm w-auto" placeholder="Title (optional)">
+            <button id="addMsgBtn" class="btn btn-pink btn-sm">Add Message</button>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <h6 class="mb-1">Music (Spotify)</h6>
+          <p class="small-muted">Embedded song for Messages.</p>
+          <!-- Spotify embed for "Free" — KPop Demon Hunters -->
+          <div class="ratio ratio-16x9 mb-2">
+            <iframe src="https://open.spotify.com/embed/track/5DxDLsW6PsLz5gkwC7Mk5S" allow="encrypted-media" style="border-radius:8px"></iframe>
+          </div>
+
+          <div class="small-muted">Or upload a local track:</div>
+          <input id="musicUploadMessages" type="file" accept="audio/*" class="form-control form-control-sm mt-2">
+          <audio id="localAudioMessages" class="w-100 mt-2" controls></audio>
+        </div>
+      </div>
+    </section>
+
+    <section id="messagesList" class="row g-3">
+      <!-- message cards injected by script -->
+    </section>
+
+    <footer class="text-center small-muted py-3">NxM • Messages are saved in your browser</footer>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
